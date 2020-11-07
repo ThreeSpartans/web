@@ -1,0 +1,1175 @@
+<html data-page="2"
+        data-canvas="1"
+        data-site="/teams/CTIMobilityNoida"
+        data-list="19:982d5db07f0d46ccbf29eac97d3ec52e@thread.skype_wiki"
+        data-tabId="tab::355d4564-2749-432a-b041-4dcea4028570"
+        data-slug="tab::355d4564-2749-432a-b041-4dcea4028570"
+        data-threadId="19:982d5db07f0d46ccbf29eac97d3ec52e@thread.skype"<body><h3 class="wiki-mht-note">This page is automatically updated from the Wiki in Microsoft Teams – any changes made here will be overwritten. To edit this page, open it in Microsoft Teams.</h3>
+<h1 id="wiki-mht-page-title-2">Andorid Components</h1>
+<h3 id="wiki-mht-section-title-3">CMKeypad</h3>
+<p id="wiki-mht-section-content-3"><div itemprop="copy-paste-block">
+<div itemprop="copy-paste-block" style="font-size:14px;"><span><strong>This class is created for custom keypad view, default view is having numeric keys (0-9 &amp; &quot;.&quot;) and delete button.</strong></span></div>
+
+<div itemprop="copy-paste-block" style="font-size:14px;"> </div>
+
+<div itemprop="copy-paste-block" style="font-size:14px;">It can be used in 2 ways.</div>
+
+<ol style="font-size:14px;">
+	<li>Default usage bu changing properties</li>
+	<li>Create subclass and customize it</li>
+</ol>
+
+<div itemprop="copy-paste-block" style="font-size:14px;"> </div>
+
+<div itemprop="copy-paste-block" style="font-size:14px;"><span><strong><span style="font-size:1.4rem;">1  Default usage by changing properties</span></strong></span></div>
+
+<div itemprop="copy-paste-block" style="font-size:14px;"> </div>
+
+<div itemprop="copy-paste-block" style="font-size:14px;"><span style="font-size:1.4rem;">We can customize UI of keys with below attributes</span></div>
+
+<div itemprop="copy-paste-block" style="font-size:14px;">
+<table class="copy-paste-table" itemprop="copy-paste-table" style="width:100%;">
+	<colgroup>
+		<col style="width:33%;"></col>
+		<col style="width:33%;"></col>
+		<col style="width:33%;"></col>
+	</colgroup>
+	<tbody>
+		<tr height="20">
+			<td height="20" width="187"><span><strong>Attribute</strong></span></td>
+			<td width="156"><span><strong>Datatype</strong></span></td>
+			<td width="262"><span><strong>Description</strong></span></td>
+		</tr>
+		<tr height="20">
+			<td height="20">columns</td>
+			<td>Integer</td>
+			<td>Indicated number of keys in a single row</td>
+		</tr>
+		<tr height="20">
+			<td height="20">textColor</td>
+			<td>color</td>
+			<td>Text color of key</td>
+		</tr>
+		<tr height="20">
+			<td height="20">fontSize</td>
+			<td>dimension(sp)</td>
+			<td>Font size of key</td>
+		</tr>
+		<tr height="40">
+			<td height="40">shape</td>
+			<td width="156">custom<br />
+			(oval/rectengle)</td>
+			<td width="262">Shape of key's background drawable<br />
+			(rectangle is default)</td>
+		</tr>
+		<tr height="20">
+			<td height="20">keyPadding</td>
+			<td>dimension(dp)</td>
+			<td>Padding around key text</td>
+		</tr>
+		<tr height="20">
+			<td height="20">borderWidth_</td>
+			<td>dimension(dp)</td>
+			<td>Width of border drawn around key</td>
+		</tr>
+		<tr height="20">
+			<td height="20">borderColor</td>
+			<td>color</td>
+			<td>Color of border drawn around key</td>
+		</tr>
+		<tr height="20">
+			<td height="20">radius</td>
+			<td>dimension(dp)</td>
+			<td>Corner radius of border</td>
+		</tr>
+		<tr height="20">
+			<td height="20">keyBackgroundColor</td>
+			<td>color</td>
+			<td>Background color for individual key</td>
+		</tr>
+		<tr height="20">
+			<td height="20">keyBackgroundColorPressed</td>
+			<td>color</td>
+			<td>Background color in pressed state</td>
+		</tr>
+		<tr height="20">
+			<td height="20">gradientStartColor</td>
+			<td>color</td>
+			<td>Start color of gradient background</td>
+		</tr>
+		<tr height="20">
+			<td height="20">gradientEndColor</td>
+			<td>color</td>
+			<td>End color of gradient background</td>
+		</tr>
+		<tr height="100">
+			<td height="100">gradientAngle</td>
+			<td width="156">custom<br />
+			(top_to_bottom<br />
+			bottom_to_top<br />
+			left_to_right<br />
+			right_to_left)</td>
+			<td>
+			<div>Angle of gradient</div>
+
+			<div>(left_to_right is default)</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div> </div>
+</div>
+
+<div style="font-size:14px;">All above attributes are open so you can change it programatically also.</div>
+
+<div style="font-size:14px;">Call <span><strong>refresh() </strong></span>function after changing any variable to reflect changes</div>
+
+<div style="font-size:14px;"> </div>
+
+<div style="font-size:14px;"><span><strong>Using Custom values for keys</strong></span></div>
+
+<div itemprop="copy-paste-block" style="font-size:14px;">You can use below method to load custom values for keys.
+<pre style="font-size:9pt;">
+<span><strong><span>fun </span></strong></span>loadKeys(keys: ArrayList&lt;KeysModel&gt;)</pre>
+</div>
+
+<div style="font-size:14px;"> </div>
+
+<div itemprop="copy-paste-block" style="font-size:14px;"><span><strong>Key Press callback</strong></span></div>
+
+<div itemprop="copy-paste-block" style="font-size:14px;">Use
+<pre style="font-size:9pt;">
+setKeyPressListener()</pre>
+</div>
+
+<div style="font-size:14px;">method for  key press callback, you will get <em>KeysModel</em> in callback method</div>
+
+<div style="font-size:14px;"> </div>
+
+<div itemprop="copy-paste-block" style="font-size:14px;">
+<div itemprop="copy-paste-block"><span><strong>2. Create subclass and customize it</strong></span></div>
+</div>
+
+<div style="font-size:14px;"> </div>
+
+<div style="font-size:14px;"> </div>
+
+<div style="font-size:14px;">Extend CMKeypad class and override below methods for further customization</div>
+
+<div itemprop="copy-paste-block" style="font-size:14px;">
+<pre style="font-size:9pt;">
+<span>open fun </span>getView(columnPosition: Int, weight: Float): LinearLayout{​​}​​​​​​​​​
+open fun bindView(view: View, columnPosition: Int, data: ArrayList&lt;KeysModel&gt;){​​​​​​​​​}​​​​​​​​​
+</pre>
+</div>
+
+<div style="font-size:14px;"> </div>
+
+<div style="font-size:14px;">Example:-</div>
+
+<div style="font-size:14px;">
+<pre style="font-size:9pt;">
+<strong><span> class </span></strong>CustomKeypad : CMKeypad {​​​​​​​​​
+    <strong><span>constructor</span></strong>(context: Context) : <strong><span>super</span></strong>(context)
+    <strong><span>constructor</span></strong>(context: Context, attrs: AttributeSet) : <strong><span>super</span></strong>(context, attrs)
+    <strong><span>constructor</span></strong>(context: Context, attrs: AttributeSet, defStyleAttr: Int) : <strong><span>super</span></strong>(context, attrs, defStyleAttr)
+
+    <strong><span>override fun </span></strong>getView(columnPosition: Int, weight: Float): View {​​​​​​​​​
+        <strong><span>val </span></strong>view = LayoutInflater.from(<em><span>context</span></em>).inflate(R.layout.<em><span>layout_key</span></em>, <strong><span>null</span></strong>)
+        <strong><span>return </span></strong>view;
+    }​​​​​​​​​
+
+    <strong><span>override fun </span></strong>bindView(view: View, columnPosition: Int, data: ArrayList&lt;KeysModel&gt;) {​​​​​​​​​
+        <strong><span>val </span></strong>mTextView: TextView = view.findViewById(R.id.<em><span>tvKey</span></em>)
+        mTextView.setText(data.get(columnPosition).<strong><span>text</span></strong>)
+
+    }​​​​​​​​​
+}​​​​​​​​​</pre>
+</div>
+
+<div style="font-size:14px;"> </div>
+
+<div style="font-size:14px;"><strong>Screenshots </strong></div>
+
+<div style="font-size:14px;"> </div>
+
+<div style="font-size:14px;"><strong>1) Default</strong></div>
+
+<div style="font-size:14px;"> </div>
+
+<div style="font-size:14px;">
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-3-d72228e9a313455499f70441b7bc16b1.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%278ce357bd-45cd-44e6-9251-51809bfc473d%27)/$value" data-ts-imgid="img4fe8aafe-8546-4e3c-b77c-e6c5a5d77b7d" data-ts-imglen="5512" height="287" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="257" /></span>
+
+<div> </div>
+</div>
+</div>
+
+<div style="font-size:14px;"><span contenteditable="false"></span>
+
+<div>
+<pre style="font-size:9pt;">
+&lt;<span>com.conduent.apollo.ui.CMKeypad
+</span><span>    </span><span>android</span><span>:layout_width=</span><span>&quot;match_parent&quot;
+</span><span>    </span><span>android</span><span>:layout_height=</span><span>&quot;wrap_content&quot;
+</span><span>    </span><span>android</span><span>:layout_weight=</span><span>&quot;1&quot;
+</span><span>    </span><span>android</span><span>:gravity=</span><span>&quot;center&quot;
+</span><span>    </span><span>android</span><span>:padding=</span><span>&quot;40dp&quot;
+</span><span>    </span><span>app</span><span>:columns=</span><span>&quot;3&quot;
+</span><span>    </span><span>app</span><span>:fontSize=</span><span>&quot;18sp&quot;
+</span><span>    </span><span>app</span><span>:keyBackgroundColor=</span><span>&quot;@color/colorAccent&quot;
+</span><span>    </span><span>app</span><span>:keyBackgroundColorPressed=</span><span>&quot;@color/colorPrimaryDark&quot;
+</span><span>    </span><span>app</span><span>:keyPadding=</span><span>&quot;10dp&quot;
+</span><span>    </span><span>app</span><span>:textColor=</span><span>&quot;@android:color/white&quot;</span>/&gt;</pre>
+</div>
+
+<div> </div>
+
+<div><strong>2) Corner radius</strong></div>
+
+<div> </div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-3-3c9ee6e806f34176a681c7858e179d4e.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27761243b1-3a24-4ea1-ad6d-7e4da7bd5d1e%27)/$value" data-ts-imgid="img1324baed-3b85-4437-9b5f-076f4c3aa464" data-ts-imglen="8834" height="286" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="260" /></span>
+
+<div> </div>
+</div>
+</div>
+
+<div>
+<div><span contenteditable="false"></span>
+
+<div>
+<pre style="font-size:9pt;">
+&lt;<span>com.conduent.apollo.ui.CMKeypad
+</span><span>    </span><span>android</span><span>:layout_width=</span><span>&quot;match_parent&quot;
+</span><span>    </span><span>android</span><span>:layout_height=</span><span>&quot;wrap_content&quot;
+</span><span>    </span><span>android</span><span>:layout_weight=</span><span>&quot;1&quot;
+</span><span>    </span><span>android</span><span>:gravity=</span><span>&quot;center&quot;
+</span><span>    </span><span>android</span><span>:padding=</span><span>&quot;40dp&quot;
+</span><span>    </span><span>app</span><span>:columns=</span><span>&quot;3&quot;
+</span><span>    </span><span>app</span><span>:fontSize=</span><span>&quot;18sp&quot;
+</span><span>    </span><span>app</span><span>:keyBackgroundColor=</span><span>&quot;@color/colorAccent&quot;
+</span><span>    </span><span>app</span><span>:keyBackgroundColorPressed=</span><span>&quot;@color/colorPrimaryDark&quot;
+</span><span>    </span><span>app</span><span>:keyPadding=</span><span>&quot;10dp&quot;
+</span><span>    </span><span>app</span><span>:textColor=</span><span>&quot;@android:color/white&quot;</span><span>
+</span><span>    </span><strong><span>app</span><span>:radius=</span><span>&quot;2dp&quot;</span></strong>/&gt;</pre>
+</div>
+
+<div> </div>
+</div>
+
+<div><strong>3) Corner radius with border</strong></div>
+
+<div> </div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-3-15a12edb4d8847de8e7b43a9f246b3c4.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27451bb7b2-5964-41e0-9efb-d15870443424%27)/$value" data-ts-imgid="img5cbd826a-0096-4ac6-91f3-27a6f38d5c7b" data-ts-imglen="12301" height="277" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="267" /></span>
+
+<div> </div>
+</div>
+</div>
+
+<div>
+<div><span contenteditable="false"></span>
+
+<div>
+<pre style="font-size:9pt;">
+&lt;<span>com.conduent.apollo.ui.CMKeypad
+</span><span>    </span><span>android</span><span>:layout_width=</span><span>&quot;match_parent&quot;
+</span><span>    </span><span>android</span><span>:layout_height=</span><span>&quot;wrap_content&quot;
+</span><span>    </span><span>android</span><span>:layout_weight=</span><span>&quot;1&quot;
+</span><span>    </span><span>android</span><span>:gravity=</span><span>&quot;center&quot;
+</span><span>    </span><span>android</span><span>:padding=</span><span>&quot;40dp&quot;
+</span><span>    </span><span>app</span><span>:columns=</span><span>&quot;3&quot;
+</span><span>    </span><span>app</span><span>:fontSize=</span><span>&quot;18sp&quot;
+</span><span>    </span><span>app</span><span>:keyBackgroundColor=</span><span>&quot;@color/colorAccent&quot;
+</span><span>    </span><span>app</span><span>:keyBackgroundColorPressed=</span><span>&quot;@color/colorPrimaryDark&quot;
+</span><span>    </span><span>app</span><span>:keyPadding=</span><span>&quot;10dp&quot;
+</span><span>    </span><span>app</span><span>:textColor=</span><span>&quot;@android:color/white&quot;</span><span>
+</span><span>    </span><strong><span>app</span><span>:radius=</span><span>&quot;2dp&quot;
+</span><span>    </span><span>app</span><span>:borderColor=</span><span>&quot;@android:color/white&quot;
+</span><span>    </span><span>app</span><span>:borderWidth_=</span><span>&quot;2dp&quot;</span>/&gt;</strong></pre>
+</div>
+
+<div> </div>
+</div>
+
+<div><strong>4) Round button</strong></div>
+
+<div> </div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-3-e162ba91975349fa94add97d66588b2e.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%275332f5df-e779-4692-b0d4-54a7d7ebbedc%27)/$value" data-ts-imgid="img96ad80ea-bfbe-40e4-93e9-0aedf886522b" data-ts-imglen="11792" height="250" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="243.66197183098592" /></span>
+
+<div> </div>
+</div>
+</div>
+
+<div>
+<div><span contenteditable="false"></span>
+
+<div>
+<pre style="font-size:9pt;">
+&lt;<span>com.conduent.apollo.ui.CMKeypad
+</span><span>    </span><span>android</span><span>:layout_width=</span><span>&quot;match_parent&quot;
+</span><span>    </span><span>android</span><span>:layout_height=</span><span>&quot;wrap_content&quot;
+</span><span>    </span><span>android</span><span>:layout_weight=</span><span>&quot;1&quot;
+</span><span>    </span><span>android</span><span>:gravity=</span><span>&quot;center&quot;
+</span><span>    </span><span>android</span><span>:padding=</span><span>&quot;40dp&quot;
+</span><span>    </span><span>app</span><span>:columns=</span><span>&quot;3&quot;
+</span><span>    </span><span>app</span><span>:fontSize=</span><span>&quot;18sp&quot;
+</span><span>    </span><span>app</span><span>:keyBackgroundColor=</span><span>&quot;@color/colorAccent&quot;
+</span><span>    </span><span>app</span><span>:keyBackgroundColorPressed=</span><span>&quot;@color/colorPrimaryDark&quot;
+</span><span>    </span><span>app</span><span>:keyPadding=</span><span>&quot;10dp&quot;
+</span><span>    </span><span>app</span><span>:textColor=</span><span>&quot;@android:color/white&quot;
+</span><span>    </span><strong><span>app</span><span>:shape=</span></strong><span><strong>&quot;oval&quot;</strong> </span>/&gt;</pre>
+</div>
+</div>
+
+<div> </div>
+</div>
+
+<div><strong>5) Round button with border</strong></div>
+
+<div> </div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-3-ce8bcfeb276a49aebd900cdee5ad1df9.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%2704b2323c-8620-4e45-812f-715e3cae3c7b%27)/$value" data-ts-imgid="imgd429d757-456c-42a3-b776-8ec1586f09a3" data-ts-imglen="17375" height="250" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="245.0284090909091" /></span>
+
+<div> </div>
+</div>
+</div>
+
+<div>
+<div><span contenteditable="false"></span>
+
+<div>
+<pre style="font-size:9pt;">
+&lt;<span>com.conduent.apollo.ui.CMKeypad
+</span><span>    </span><span>android</span><span>:layout_width=</span><span>&quot;match_parent&quot;
+</span><span>    </span><span>android</span><span>:layout_height=</span><span>&quot;wrap_content&quot;
+</span><span>    </span><span>android</span><span>:layout_weight=</span><span>&quot;1&quot;
+</span><span>    </span><span>android</span><span>:gravity=</span><span>&quot;center&quot;
+</span><span>    </span><span>android</span><span>:padding=</span><span>&quot;40dp&quot;
+</span><span>    </span><span>app</span><span>:columns=</span><span>&quot;3&quot;
+</span><span>    </span><span>app</span><span>:fontSize=</span><span>&quot;18sp&quot;
+</span><span>    </span><span>app</span><span>:keyBackgroundColor=</span><span>&quot;@color/colorAccent&quot;
+</span><span>    </span><span>app</span><span>:keyBackgroundColorPressed=</span><span>&quot;@color/colorPrimaryDark&quot;
+</span><span>    </span><span>app</span><span>:keyPadding=</span><span>&quot;10dp&quot;
+</span><span>    </span><span>app</span><span>:textColor=</span><span>&quot;@android:color/white&quot;
+</span><span>    </span><strong><span>app</span><span>:shape=</span><span>&quot;oval&quot; 
+</span><span>    </span><span>app</span><span>:borderWidth_=</span><span>&quot;2dp&quot;
+</span><span>    </span><span>app</span><span>:borderColor=</span><span>&quot;@android:color/white&quot;</span></strong>/&gt;</pre>
+</div>
+</div>
+
+<div> </div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="font-size:14px;">                                                                                                      </div>
+</div>
+</p>
+<h3 id="wiki-mht-section-title-17">CMTextInput</h3>
+<p id="wiki-mht-section-content-17"><div>This component is 4 in one, it can be used for Plain Text Input, Password, SSN &amp; ZIP input. There are various attributes using which we can change behvaiour and UI of this Component. </div>
+
+<div> </div>
+
+<div>Below are few examples of CMTextIput</div>
+
+<div> </div>
+
+<div>1) Plain Text (Default)</div>
+
+<div> </div>
+
+<div itemprop="copy-paste-block">
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.apollo.ui.CMTextInput
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:id</span></strong><strong><span>=&quot;@+id/custom_input&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;match_parent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;wrap_content&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_margin</span></strong><strong><span>=&quot;10dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:clearIcon</span></strong><strong><span>=&quot;@drawable/close&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:failureIcon</span></strong><strong><span>=&quot;@mipmap/eyeball_icon&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:focusColor</span></strong><strong><span>=&quot;#e22ddc&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:imeOptions</span></strong><strong><span>=&quot;actionDone&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputErrorColor</span></strong><strong><span>=&quot;#ddc32e&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputSuccessColor</span></strong><strong><span>=&quot;#00ff00&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputTextSize</span></strong><strong><span>=&quot;25sp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelColor</span></strong><strong><span>=&quot;#c66224&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelText</span></strong><strong><span>=&quot;Custom TextInput&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelTextSize</span></strong><strong><span>=&quot;14sp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:maxLength</span></strong><strong><span>=&quot;10&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:normalColor</span></strong><strong><span>=&quot;#070707&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:successIcon</span></strong><strong><span>=&quot;@drawable/close&quot; </span></strong>/&gt;</pre>
+</div>
+
+<div itemprop="copy-paste-block">
+<div>
+<div>
+<div>
+<div> </div>
+</div>
+</div>
+
+<div>
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-17-dd01ec7f96b541f2bdceb3c7ef52a91b.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%2766564c20-2f3d-478f-95b9-3634b94fc3fe%27)/$value" data-ts-imgid="imgd85e343b-b75d-4aac-b854-126d87fa859d" data-ts-imglen="7534" height="174" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="751" /></span>
+
+<div><strong>- Focused state</strong></div>
+
+<div> </div>
+</div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-17-7d3f3d6198db4239b1958cc0e3d6dae1.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27eb20e218-5de4-4ceb-842d-e5f65141787e%27)/$value" data-ts-imgid="img3bd5ea33-3200-476f-9c76-07654223b6dc" data-ts-imglen="12799" height="196" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="751" /></span>
+
+<div> </div>
+
+<div><strong>- Error State</strong></div>
+
+<div> </div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-17-845f7f74406f4bf3902a6814b4a55133.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%2700437031-ac95-49a5-b28f-00988b921235%27)/$value" data-ts-imgid="imgf59b253e-17e3-443a-be3d-3aed679f9a2f" data-ts-imglen="7790" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" /></span>
+
+<div> </div>
+</div>
+
+<div> </div>
+</div>
+</div>
+
+<div> </div>
+</div>
+</div>
+</div>
+
+<div> </div>
+
+<div>2) Password </div>
+
+<div> </div>
+
+<div>
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.apollo.ui.CMTextInput
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:id</span></strong><strong><span>=&quot;@+id/custom_pwd&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;match_parent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;wrap_content&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_margin</span></strong><strong><span>=&quot;10dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:focusColor</span></strong><strong><span>=&quot;#e22ddc&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:imeOptions</span></strong><strong><span>=&quot;actionDone&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputAverageColor</span></strong><strong><span>=&quot;#0000ff&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputStrongColor</span></strong><strong><span>=&quot;#00ff00&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputTextSize</span></strong><strong><span>=&quot;25sp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputType</span></strong><strong><span>=&quot;number&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputWeakColor</span></strong><strong><span>=&quot;#ff0000&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelColor</span></strong><strong><span>=&quot;#c66224&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelText</span></strong><strong><span>=&quot;Custom password &quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelTextSize</span></strong><strong><span>=&quot;14sp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:maxLength</span></strong><strong><span>=&quot;10&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:type</span></strong><strong><span>=&quot;password&quot; </span></strong>/&gt;</pre>
+</div>
+
+<div> </div>
+
+<div>
+<div>
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-17-d743c7de1cac4710845bccab5d149c98.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27b65b847f-a1ea-4e54-bc25-3f70582051fe%27)/$value" data-ts-imgid="img13a0a837-e6a8-4b63-81ee-bb21696fc1ae" data-ts-imglen="16067" height="220" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="751" /></span>
+
+<div> </div>
+</div>
+
+<div> </div>
+</div>
+
+<div> </div>
+
+<div> </div>
+
+<div>3) SSN</div>
+
+<div> </div>
+
+<div>
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.apollo.ui.CMTextInput
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:id</span></strong><strong><span>=&quot;@+id/custom_ssn&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;match_parent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;wrap_content&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_margin</span></strong><strong><span>=&quot;10dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:focusColor</span></strong><strong><span>=&quot;#e22ddc&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:imeOptions</span></strong><strong><span>=&quot;actionSearch&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputAverageColor</span></strong><strong><span>=&quot;#0000ff&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputStrongColor</span></strong><strong><span>=&quot;#00ff00&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputTextSize</span></strong><strong><span>=&quot;25sp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputType</span></strong><strong><span>=&quot;phone&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputWeakColor</span></strong><strong><span>=&quot;#ff0000&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelColor</span></strong><strong><span>=&quot;#c66224&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelText</span></strong><strong><span>=&quot;Custom SSN&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelTextSize</span></strong><strong><span>=&quot;14sp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:maxLength</span></strong><strong><span>=&quot;20&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:type</span></strong><strong><span>=&quot;ssn&quot; </span></strong>/&gt;</pre>
+</div>
+</div>
+
+<div> </div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-17-7fcf070122874846b19f21e9a3e3fc96.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%273d06281b-5492-450a-a78c-e6321ebf9b69%27)/$value" data-ts-imgid="img7c8a9a9c-4b1d-430f-8dd8-3c7f34e5aeb7" data-ts-imglen="10038" height="172" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="751" /></span>
+
+<div> </div>
+</div>
+
+<div> </div>
+</div>
+</div>
+
+<div>4) ZIP</div>
+
+<div> </div>
+
+<div>
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.apollo.ui.CMTextInput
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:id</span></strong><strong><span>=&quot;@+id/custom_zip&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;match_parent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;wrap_content&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_margin</span></strong><strong><span>=&quot;10dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:focusColor</span></strong><strong><span>=&quot;#e22ddc&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:imeOptions</span></strong><strong><span>=&quot;actionSearch&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputErrorColor</span></strong><strong><span>=&quot;#0000ff&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputSuccessColor</span></strong><strong><span>=&quot;#00ff00&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputTextSize</span></strong><strong><span>=&quot;25sp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputType</span></strong><strong><span>=&quot;phone&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelColor</span></strong><strong><span>=&quot;#c66224&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelText</span></strong><strong><span>=&quot;Custom Zip&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelTextSize</span></strong><strong><span>=&quot;14sp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:maxLength</span></strong><strong><span>=&quot;20&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:type</span></strong><strong><span>=&quot;zip&quot; </span></strong>/&gt;</pre>
+</div>
+</div>
+
+<div> </div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-17-08fa126e8b4345159bc6332beb648ad7.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27039b739b-d845-476f-9183-dbfc1b9bcc88%27)/$value" data-ts-imgid="img381c50e6-f076-424a-b5d4-5498f0bcb381" data-ts-imglen="15328" height="170" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="751" /></span>
+
+<div> </div>
+</div>
+
+<div> </div>
+</div>
+</div>
+</p>
+<h3 id="wiki-mht-section-title-73">CMGradientDrawableBuilder</h3>
+<p id="wiki-mht-section-content-73"><div>This class can be used to create solid as well as gradient color background drawables which can be used with with any view</div>
+
+<div> </div>
+
+<ul>
+	<li>Code snippet</li>
+</ul>
+
+<div itemprop="copy-paste-block">
+<pre style="font-size:9pt;">
+var gdNormalState = GradientDrawable(
+        GradientDrawable.Orientation.TOP_BOTTOM,
+        intArrayOf(gradientStartColor, gradientEndColor))
+gdNormalState?.shape = if (shape == 1) GradientDrawable.RECTANGLE else GradientDrawable.OVAL
+gdNormalState?.cornerRadius = radius
+gdNormalState?.setStroke(borderWidth.toInt(), borderColor)
+
+val gDPressed = CMGradientDrawableBuilder()
+        .setColor(backgroundColorPressed)
+        .setShape(if (shape == 1) GradientDrawable.RECTANGLE else GradientDrawable.OVAL)
+        .setCornerRadius(radius)
+        .setStroke(borderWidth.toInt(), borderColor)
+        .build()
+
+val res = StateListDrawable()
+res.addState(intArrayOf(android.R.attr.state_pressed), gDPressed)
+res.addState(intArrayOf(), gdNormalState)
+(this as AppCompatButton).setBackground(res)
+
+</pre>
+</div>
+
+<div> </div>
+
+<ul>
+	<li>Gradient Button example</li>
+</ul>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-73-33f0876bfbf74e6298a3f559d0604389.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27e1cd2ce7-3108-4728-9d45-b1c5120debde%27)/$value" data-ts-imgid="imgea2a3271-c7a1-42c8-8586-a16b0ebcc738" data-ts-imglen="13601" height="77" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="541" /></span>
+
+<div> </div>
+</div>
+</div>
+
+<div> </div>
+</p>
+<h3 id="wiki-mht-section-title-18">CMButton</h3>
+<p id="wiki-mht-section-content-18"><div>This UI component is capable for creating custom designed buttons, We can style the button as per project requirement. It can be used for rectangle as well as Round buttons also.</div>
+
+<div> </div>
+
+<div>Below are two widely used Button UI examples</div>
+
+<div> </div>
+
+<div>1) Solid color Button</div>
+
+<div> </div>
+
+<div itemprop="copy-paste-block">
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.apollo.ui.CMButton
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:id</span></strong><strong><span>=&quot;@+id/btnSubmit&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;match_parent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;wrap_content&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_gravity</span></strong><strong><span>=&quot;center_horizontal&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_margin</span></strong><strong><span>=&quot;10dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:drawablePadding</span></strong><strong><span>=&quot;5dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:gravity</span></strong><strong><span>=&quot;center&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:text</span></strong><strong><span>=&quot;Submit&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:textColor</span></strong><strong><span>=&quot;@color/apollo_button_white_color&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:textSize</span></strong><strong><span>=&quot;16dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:backgroundColor</span></strong><strong><span>=&quot;@color/colorAccent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:borderWidth_</span></strong><strong><span>=&quot;2dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:radius</span></strong><strong><span>=&quot;5dp&quot; </span></strong>/&gt;</pre>
+</div>
+
+<div> </div>
+
+<div itemprop="copy-paste-block">
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-18-a027786740a64144a5bda5baec0c5ccf.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27e3169a9e-6596-40c9-807c-68169dd6cee5%27)/$value" data-ts-imgid="imgbc8c0a4a-c3ff-4d09-8e93-b3edf67c2f2b" data-ts-imglen="5098" height="158" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="751" /></span>
+
+<div>2) Bordered Button</div>
+
+<div> </div>
+
+<div>
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.apollo.ui.CMButton
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;match_parent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;wrap_content&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_gravity</span></strong><strong><span>=&quot;center_horizontal&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_margin</span></strong><strong><span>=&quot;10dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:drawablePadding</span></strong><strong><span>=&quot;5dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:gravity</span></strong><strong><span>=&quot;center&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:text</span></strong><strong><span>=&quot;Cancel&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:textColor</span></strong><strong><span>=&quot;@color/colorAccent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:textSize</span></strong><strong><span>=&quot;16dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:borderColor</span></strong><strong><span>=&quot;@color/colorAccent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:borderWidth_</span></strong><strong><span>=&quot;2dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:radius</span></strong><strong><span>=&quot;5dp&quot; </span></strong>/&gt;</pre>
+</div>
+</div>
+
+<div> </div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-18-f753999f585b4ae88388bc3e6d8ec21f.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%271a3cf08e-8377-4e1e-954d-ee67718cfb23%27)/$value" data-ts-imgid="img4c8e0a77-3e87-4979-a036-015350d9d548" data-ts-imglen="5012" height="138" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="751" /></span>
+
+<div> </div>
+
+<div>3) Gradient background button</div>
+
+<div> </div>
+
+<div>
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.apollo.ui.CMButton
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;match_parent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;wrap_content&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_margin</span></strong><strong><span>=&quot;10dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:drawablePadding</span></strong><strong><span>=&quot;5dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:gravity</span></strong><strong><span>=&quot;center&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:text</span></strong><strong><span>=&quot;Submit&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:textColor</span></strong><strong><span>=&quot;@color/apollo_button_white_color&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:gradientAngle</span></strong><strong><span>=&quot;left_to_right&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:gradientStartColor</span></strong><strong><span>=&quot;@color/colorGradientEnd&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:gradientEndColor</span></strong><strong><span>=&quot;@color/colorGradientStart&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:radius</span></strong><strong><span>=&quot;5dp&quot; </span></strong>/&gt;</pre>
+</div>
+</div>
+
+<div> </div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-18-ee3b08284d4c49e58f09046657a92b68.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27a3ec8fe4-bfca-42e6-9563-724ad666efeb%27)/$value" data-ts-imgid="imgb51f13f0-75a5-49bf-bf2e-41ca0316f536" data-ts-imglen="13601" height="77" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="541" /></span>
+
+<div> </div>
+
+<div>4) Circle Button (<strong><span>app</span></strong><strong><span>:shape</span></strong><strong><span>=&quot;oval&quot;</span></strong>)</div>
+
+<div> </div>
+
+<div>
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.apollo.ui.CMButton
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;60dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;60dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_margin</span></strong><strong><span>=&quot;10dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:drawablePadding</span></strong><strong><span>=&quot;5dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_gravity</span></strong><strong><span>=&quot;center_horizontal&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:gravity</span></strong><strong><span>=&quot;center&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:text</span></strong><strong><span>=&quot;Submit&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:textSize</span></strong><strong><span>=&quot;12sp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:textColor</span></strong><strong><span>=&quot;@color/apollo_button_white_color&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:shape</span></strong><strong><span>=&quot;oval&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:backgroundColor</span></strong><strong><span>=&quot;@color/colorAccent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:radius</span></strong><strong><span>=&quot;5dp&quot; </span></strong>/&gt;</pre>
+</div>
+
+<div> </div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-18-1ad6662094bd4ace86670642deb2617a.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%2724487bac-a620-438f-8185-512880bc9c90%27)/$value" data-ts-imgid="imgebc45142-e2cd-4aa1-b458-7df5be814169" data-ts-imglen="5923" height="108" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="322" /></span>
+
+<div> </div>
+</div>
+
+<div> </div>
+</div>
+</div>
+</div>
+
+<div> </div>
+</div>
+</div>
+</p>
+<h3 id="wiki-mht-section-title-19">CMSearchView</h3>
+<p id="wiki-mht-section-content-19"><div>This component can be used to implement search functionality to List of items, It has one callback which gives the value as user types something in it. </div>
+
+<div> </div>
+
+<div>Example:-</div>
+
+<div> </div>
+
+<div itemprop="copy-paste-block">
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.apollo.ui.CMSearchView
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:id</span></strong><strong><span>=&quot;@+id/search_view&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_margin</span></strong><strong><span>=&quot;10dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;match_parent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;wrap_content&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_marginTop</span></strong><strong><span>=&quot;18dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:fontFamily</span></strong><strong><span>=&quot;@font/open_sans&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:gravity</span></strong><strong><span>=&quot;center_vertical&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:hint</span></strong><strong><span>=&quot;Search&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:paddingBottom</span></strong><strong><span>=&quot;40dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:textSize</span></strong><strong><span>=&quot;16sp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:backgroundDrawable</span></strong><strong><span>=&quot;@drawable/edt_bg_selector&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:drawablePadding</span></strong><strong><span>=&quot;10dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:focusColor</span></strong><strong><span>=&quot;@color/colorPrimary&quot; </span></strong>/&gt;</pre>
+</div>
+
+<div> </div>
+
+<div>1) CMSearchView</div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-19-167323de4bc24ebd9d1339d0ccdd23ea.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27b4d1610e-3fb0-4979-a82a-577e87d0e173%27)/$value" data-ts-imgid="img8384c41e-5604-4f66-b444-9193a08e6c80" data-ts-imglen="5859" height="139" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="751" /></span>
+
+<div> </div>
+
+<div>2) CMSearchView Focused state</div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-19-753ecd8a2bc94036a21bf0d80ab465a1.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27793f4e6f-a3e7-4542-8050-5cceee542aa5%27)/$value" data-ts-imgid="img0c763401-ccce-4e23-9935-7c158f88e2d6" data-ts-imglen="5644" height="110" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="541" /></span>
+
+<div> </div>
+</div>
+</div>
+</div>
+
+<div> </div>
+</div>
+</p>
+<h3 id="wiki-mht-section-title-20">CMStepView</h3>
+<p id="wiki-mht-section-content-20"><div>CMStepView can be used as timeline view and as a screen indicator when there are multiple screens in a single flow.</div>
+
+<div> </div>
+
+<div>Example:- </div>
+
+<div> </div>
+
+<div itemprop="copy-paste-block">
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.apollo.ui.CMStepView
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:id</span></strong><strong><span>=&quot;@+id/stepView&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;match_parent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;wrap_content&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:entries</span></strong><strong><span>=&quot;@array/steps&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:borderWidth_</span></strong><strong><span>=&quot;3dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:circleColor</span></strong><strong><span>=&quot;@color/colorPrimary&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:circleColorSelected</span></strong><strong><span>=&quot;@color/colorAccent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:circleWidth</span></strong><strong><span>=&quot;15dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:isStepClickable</span></strong><strong><span>=&quot;true&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:lineColor</span></strong><strong><span>=&quot;@color/colorPrimary&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:lineColorSelected</span></strong><strong><span>=&quot;@color/colorAccent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:lineHeight</span></strong><strong><span>=&quot;3dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:textColor</span></strong><strong><span>=&quot;@color/colorPrimary&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:textColorSelected</span></strong><strong><span>=&quot;@color/colorAccent&quot; </span></strong>/&gt;</pre>
+</div>
+
+<div> </div>
+
+<div>1) Step 1</div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-20-9023b7a1ef374f20881d76683c07b713.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27ed239620-cdc8-46b9-aa2e-24b8db40889b%27)/$value" data-ts-imgid="imgf3bc7b28-5d54-4c16-9605-2699fffaa1a7" data-ts-imglen="11466" height="107" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="386" /></span>
+
+<div> </div>
+
+<div>2) Step 1 Completed, Current Step 2</div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-20-bca92b7849a64bf9a92996403ba46930.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%2715d8e174-7e5b-462c-bb1d-8daf857d739d%27)/$value" data-ts-imgid="imgac8b7b89-6148-4dad-9a95-13e05263d1ef" data-ts-imglen="11499" height="99" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="383" /></span>
+
+<div> </div>
+</div>
+
+<div> </div>
+</div>
+</div>
+
+<div> </div>
+</div>
+</p>
+<h3 id="wiki-mht-section-title-21">CMTimeInput</h3>
+<p id="wiki-mht-section-content-21"><div>This UI component is used for entering time in a input field, it is  built on top of android native TimePicker and also it is extending CMTextInput so we can leverage all the properties of CMTextInput in this component and do some validation on user input.</div>
+
+<div> </div>
+
+<div>Example:- </div>
+
+<div> </div>
+
+<div itemprop="copy-paste-block">
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.apollo.ui.CMTimeInput
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;match_parent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;wrap_content&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_gravity</span></strong><strong><span>=&quot;center&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:gravity</span></strong><strong><span>=&quot;center_vertical&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_margin</span></strong><strong><span>=&quot;10dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:visibility</span></strong><strong><span>=&quot;visible&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:imeOptions</span></strong><strong><span>=&quot;actionDone&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:focusColor</span></strong><strong><span>=&quot;#00ff00&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelText</span></strong><strong><span>=&quot;Time&quot; </span></strong>/&gt;</pre>
+</div>
+
+<div> </div>
+
+<div itemprop="copy-paste-block">
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-21-618d63c4a22a4cb6bc55a70e2ab67e67.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27bc851a3c-3704-4d2f-bf94-b058672570f0%27)/$value" data-ts-imgid="img1b6a606c-6a4a-483a-a5eb-b71e0e8873eb" data-ts-imglen="3855" height="116" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="861" /></span>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-21-55241ac4fc3f4a46a4d32a939a9e87ea.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27071e353a-fa43-4774-9a92-22627c9dd60d%27)/$value" data-ts-imgid="imgf6a93078-98db-49e2-9c34-03acb99e5010" data-ts-imglen="70877" height="504" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="282" /></span>
+
+<div> </div>
+
+<div><br />
+<span style="font-size:14px;">2) Change Theme Color</span></div>
+
+<div>
+<pre style="font-size:9pt;">
+<strong><span>app</span></strong><strong><span>:themeStyle</span></strong><strong><span>=&quot;@style/DialogTheme&quot;</span></strong></pre>
+</div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-21-12b960ebb25a401e9087642056258e1c.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%2710335456-ef83-426f-ab5e-3ad23bdb6a64%27)/$value" data-ts-imgid="imgeb57d449-ced2-476f-80b7-c58d413c25f2" data-ts-imglen="73838" height="503" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="283" /></span>
+
+<div> </div>
+</div>
+
+<div> </div>
+</div>
+
+<div> </div>
+</div>
+</div>
+</div>
+</div>
+
+<div> </div>
+</p>
+<h3 id="wiki-mht-section-title-39">CMDateInput</h3>
+<p id="wiki-mht-section-content-39"><div itemprop="copy-paste-block"><span style="font-size:14px;">This UI component is used for entering date in a input field, it is  built on top of android native DatePicker and also it is extending CMTextInput so we can leverage all the properties of CMTextInput in this component and do some validation on user input.</span></div>
+
+<div itemprop="copy-paste-block"> </div>
+
+<div itemprop="copy-paste-block">Example:-</div>
+
+<div itemprop="copy-paste-block"> </div>
+
+<div itemprop="copy-paste-block">
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.apollo.ui.CMDateInput
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:id</span></strong><strong><span>=&quot;@+id/et_date&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;match_parent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;wrap_content&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_gravity</span></strong><strong><span>=&quot;center&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:gravity</span></strong><strong><span>=&quot;center_vertical&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_margin</span></strong><strong><span>=&quot;10dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:visibility</span></strong><strong><span>=&quot;visible&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:imeOptions</span></strong><strong><span>=&quot;actionDone&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:inputType</span></strong><strong><span>=&quot;number&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:backgroundDrawable</span></strong><strong><span>=&quot;@drawable/edt_bg_selector&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:focusColor</span></strong><strong><span>=&quot;#00ff00&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelText</span></strong><strong><span>=&quot;Date of Birth (MM/DD/YYYY)&quot; </span></strong>/&gt;</pre>
+</div>
+
+<div itemprop="copy-paste-block"> </div>
+
+<div itemprop="copy-paste-block">
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-39-1c0c8cd896944b279ec5efa16bf7c2f4.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%277aad3514-6d4f-4cb6-a8e5-a7fafeb3e3e7%27)/$value" data-ts-imgid="imgcb061593-712b-4cb1-bb21-fc2faaafa1cc" data-ts-imglen="81855" height="525" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="296" /></span>
+
+<div> </div>
+
+<div>2) Change Theme Color</div>
+
+<div>
+<pre style="font-size:9pt;">
+<strong><span>app</span></strong><strong><span>:themeStyle</span></strong><strong><span>=&quot;@style/DialogTheme&quot;</span></strong></pre>
+</div>
+</div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-39-fe65e4da0f0c45ab9b76a0925a94b4ca.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27b8724a80-d76e-496f-aadb-f748b25c9907%27)/$value" data-ts-imgid="img2a39b79d-2b17-4db5-9078-65bc5c6262c2" data-ts-imglen="78230" height="539" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="303" /></span>
+
+<div> </div>
+</div>
+
+<div> </div>
+</div>
+</div>
+</p>
+<h3 id="wiki-mht-section-title-22">CMDropDownView</h3>
+<p id="wiki-mht-section-content-22"><div>This component is for showing list of items as dropdown. User can select tap on any item and selected item will be shown in InputView.</div>
+
+<div>&nbsp;</div>
+
+<div>Example:-&nbsp;</div>
+
+<div itemprop="copy-paste-block">
+<pre style="font-size:9pt;">&lt;<strong><span>com.conduent.apollo.ui.CMDropDownView
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:entries</span></strong><strong><span>="@array/entries"
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>="match_parent"
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:labelText</span></strong><strong><span>="Select Item"
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>="wrap_content"</span></strong>/&gt;</pre>
+</div>
+
+<div>
+<div><span contenteditable="false"><img alt="" data-ts-imgid="img7ed4a2e2-222c-481e-bb28-1604b225f638" data-ts-imglen="19376" height="250" style="vertical-align:bottom;" width="410" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%271d120122-ad3d-4f2d-a66d-643e4e25b29f%27)/$value" data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-22-6c8c4530eb704eea99a1884ee0cb33a6.png" itemtype="http://teams.microsoft.com/WikiImage"></span>
+
+<div>&nbsp;</div>
+</div>
+</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+</p>
+<h3 id="wiki-mht-section-title-23">CMCenteredIconButton</h3>
+<p id="wiki-mht-section-content-23"><div>This Component is built on top of CMButton and it is used when there is requirement to show image icon and text center aligned</div>
+
+<div>&nbsp;</div>
+
+<div>Example:-</div>
+
+<div class="copy-paste-block" itemprop="copy-paste-block">
+<pre style="font-size:9pt;">&lt;<strong><span>com.conduent.apollo.ui.CMCenteredIconButton
+</span></strong><strong><span>        </span></strong><strong><span>android</span></strong><strong><span>:id</span></strong><strong><span>="@+id/btn_paypal"
+</span></strong><strong><span>        </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>="0dp"
+</span></strong><strong><span>        </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>="43sp"
+</span></strong><strong><span>        </span></strong><strong><span>android</span></strong><strong><span>:layout_marginLeft</span></strong><strong><span>="@dimen/margin_15"
+</span></strong><strong><span>        </span></strong><strong><span>android</span></strong><strong><span>:layout_marginTop</span></strong><strong><span>="2dp"
+</span></strong><strong><span>        </span></strong><strong><span>android</span></strong><strong><span>:layout_weight</span></strong><strong><span>="1"
+</span></strong><strong><span>        </span></strong><strong><span>android</span></strong><strong><span>:drawableLeft</span></strong><strong><span>="@drawable/ic_paypal_button"
+</span></strong><strong><span>        </span></strong><strong><span>app</span></strong><strong><span>:backgroundColor</span></strong><strong><span>="@color/colorYellow"
+</span></strong><strong><span>        </span></strong><strong><span>app</span></strong><strong><span>:radius</span></strong><strong><span>="5dp" </span></strong>/&gt;
+</pre>
+
+<div>&nbsp;</div>
+
+<div>
+<div><span contenteditable="false"><img alt="" data-ts-imgid="img406813f8-8443-4c96-aae5-450aaeaeb7bb" data-ts-imglen="5271" height="111" style="vertical-align:bottom;" width="321" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%279caf6b91-f2fd-483d-a9e6-eefc689963ee%27)/$value" data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-23-568cc028e2804a10a7c836f44f2c2be8.png" itemtype="http://teams.microsoft.com/WikiImage"></span>
+
+<div>&nbsp;</div>
+</div>
+
+<div>&nbsp;</div>
+</div>
+</div>
+</p>
+<h3 id="wiki-mht-section-title-40">CMStepProgressBar</h3>
+<p id="wiki-mht-section-content-40"><div>Functionality of this UI component is same as CMStepView only UI is different here, it used to show steps on screen</div>
+
+<div> </div>
+
+<div>Example:-</div>
+
+<div> </div>
+
+<div itemprop="copy-paste-block">
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.apollo.ui.CMStepProgressBar
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:id</span></strong><strong><span>=&quot;@+id/step_progress_bar&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;match_parent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;wrap_content&quot;
+</span></strong><strong><span>    </span></strong><strong><span>android</span></strong><strong><span>:layout_marginTop</span></strong><strong><span>=&quot;10dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:barHeight</span></strong><strong><span>=&quot;15dp&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:completeColor</span></strong><strong><span>=&quot;@color/colorAccent&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:noOfSteps</span></strong><strong><span>=&quot;6&quot;
+</span></strong><strong><span>    </span></strong><strong><span>app</span></strong><strong><span>:waitingColor</span></strong><strong><span>=&quot;@color/colorPrimaryDark&quot;</span></strong>&gt;</pre>
+</div>
+
+<div> </div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-40-a0b7a575e56147d38aa5c00ff8bf93bb.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27aef03e86-1eb1-440c-a235-aaf1f83e76ba%27)/$value" data-ts-imgid="img6f6f7e25-b620-4fa3-911f-2ce74f1aaac0" data-ts-imglen="2920" height="82" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="592" /></span>
+
+<div> </div>
+</div>
+
+<div> </div>
+</div>
+
+<div> </div>
+</p>
+<h3 id="wiki-mht-section-title-44">CMCalendar</h3>
+<p id="wiki-mht-section-content-44"></p>
+<h3 id="wiki-mht-section-title-47">CMCardConnect</h3>
+<p id="wiki-mht-section-content-47"><div>This view is wrapper class for card connect api, There is input box for card number, Once user enters correct card number it will be converted into Token which will be used for all future communication with backend</div>
+
+<div> </div>
+
+<div>Example:-</div>
+
+<div> </div>
+
+<div itemprop="copy-paste-block">
+<pre style="font-size:9pt;">
+&lt;<strong><span>com.conduent.njezpass.presentation.utils.customview.CMCardConnect
+</span></strong><strong><span>        </span></strong><strong><span>android</span></strong><strong><span>:id</span></strong><strong><span>=&quot;@+id/et_card_number&quot;
+</span></strong><strong><span>        </span></strong><strong><span>android</span></strong><strong><span>:layout_width</span></strong><strong><span>=&quot;match_parent&quot;
+</span></strong><strong><span>        </span></strong><strong><span>android</span></strong><strong><span>:layout_height</span></strong><strong><span>=&quot;wrap_content&quot;
+</span></strong><strong><span>        </span></strong><strong><span>android</span></strong><strong><span>:layout_marginTop</span></strong><strong><span>=&quot;@dimen/margin_20&quot;
+</span></strong><strong><span>        </span></strong><strong><span>android</span></strong><strong><span>:background</span></strong><strong><span>=&quot;@android:color/transparent&quot; </span></strong>/&gt;</pre>
+</div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-47-d1f260bbf6b64d2e887de21101d27311.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27c1f304f6-dfdb-4211-bf4c-72a448e87bab%27)/$value" data-ts-imgid="img1d7d01af-3055-4eaf-b0ba-9a63c5be0bea" data-ts-imglen="2610" height="60" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="316" /></span>
+
+<div> </div>
+</div>
+
+<div> </div>
+</div>
+
+<div> </div>
+</p>
+<h3 id="wiki-mht-section-title-48">CMLicencePlateReaderALPR</h3>
+<p id="wiki-mht-section-content-48"><div>This component is used to fetch licence plate &amp; vehicle details from image of licence plate. We are using a third party service provider here and this component is wrapper of it. </div>
+
+<div> </div>
+
+<div><strong>Code Snippet:-</strong></div>
+
+<div> </div>
+
+<div itemprop="copy-paste-block">
+<pre style="font-size:9pt;">
+ALPRHelper((images.get(<span>0</span>) <strong><span>as </span></strong>Image).path, <strong><span>&quot;sk_5c3e9a1327fd01ab622bd88d&quot;</span></strong>, <strong><span>object </span></strong>: OnALPRResponse {
+    override <strong><span>fun </span></strong>onSuccess(jsonObject: JSONObject?) {
+        Log.e(<strong><span>&quot;Response&quot;</span></strong>, jsonObject.toString())
+        <strong><span>val </span></strong>plateModel: PlateModel = Gson().fromJson(jsonObject.toString(), PlateModel::<strong><span>class</span></strong>.java)
+        Toast.makeText(<strong><span>this</span></strong>@MainActivity, plateModel.results.get(<span>0</span>).plate, Toast.LENGTH_SHORT).show()
+        <em><span>//Toast.makeText(this@MainActivity, jsonObject.toString(), Toast.LENGTH_SHORT).show()
+</span></em><em><span>    </span></em>}
+
+    override <strong><span>fun </span></strong>onFailed(message: String?) {
+        Log.e(<strong><span>&quot;Response&quot;</span></strong>, message)
+        <em><span>//Toast.makeText(this@MainActivity, message, Toast.LENGTH_SHORT).show()
+</span></em><em><span>    </span></em>}
+
+}).loadPlateDetails()</pre>
+</div>
+
+<div> </div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-48-12026e00cf1942e6bae814aa37330bc9.jpeg" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%27fe18e506-b442-4203-afe6-140ff7215125%27)/$value" data-ts-imgid="imge1424421-c664-4ac7-a303-d85ecd3d06d2" data-ts-imglen="66575" height="180" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="358" /></span>
+
+<div> </div>
+</div>
+
+<div>
+<div><span contenteditable="false"><img alt data-preview-src="/teams/CTIMobilityNoida/Teams Wiki Data/Mobility Platform/img-48-76affbc3d1a8470f9047cf0a187e9899.png" src="https://conduent.sharepoint.com/teams/CTIMobilityNoida/_api/web/getfilebyid(%275b7be3c0-f65b-4f2c-9c81-a93f26ab3de7%27)/$value" data-ts-imgid="imgbac70ce6-5b0b-4486-b34b-558dc85da486" data-ts-imglen="63804" height="601" itemtype="http://teams.microsoft.com/WikiImage" style="vertical-align:bottom;" width="338" /></span>
+
+<div> </div>
+</div>
+
+<div> </div>
+</div>
+</div>
+
+<div> </div>
+</p>
+<h3 id="wiki-mht-section-title-49">CMFirebaseEventLoggern</h3>
+<p id="wiki-mht-section-content-49"><div>This component can be used for logging screen view events and some other important events to firebase cloud which can be later viewed as numeric or graph report</div>
+</p>
+<h3 id="wiki-mht-section-title-57">CMBarCodeScanner</h3>
+<p id="wiki-mht-section-content-57"><div>CMBarcodeSnanner can be used when there is requirement to scan a QR Code or Barcode.</div>
+
+<div>It is integrated with camera so one can point camera towards QR Code and scan it</div>
+</p>
+<h3 id="wiki-mht-section-title-58">CMImageHelper</h3>
+<p id="wiki-mht-section-content-58"></p>
+<h3 id="wiki-mht-section-title-59">CMNetworkHelper</h3>
+<p id="wiki-mht-section-content-59"><div>This module is developed to make REST API call from application.</div>
+
+<div> </div>
+
+<div itemprop="copy-paste-block">
+<pre style="font-size:9pt;">
+<strong><span>val </span></strong>call: Call&lt;PaymentModel.Response&gt; =
+    ServiceGenerator&lt;APIService&gt;().getService(APIService::<strong><span>class</span></strong>.<em><span>java</span></em>)
+        .doPayment(Initializer.getHeader(), request)
+NetworkClient&lt;PaymentModel.Response&gt;().executeAsync(
+    call,
+    APIConstants.RequestCode.<strong><span>PAYMENT</span></strong>.<strong><span>ordinal</span></strong>,
+    <strong><span>this
+</span></strong>)</pre>
+</div>
+</p>
+<h3 id="wiki-mht-section-title-60">BiometricAuthentication</h3>
+<p id="wiki-mht-section-content-60"><div>This component is used for Finger print authntication.</div>
+
+<div> </div>
+
+<div itemprop="copy-paste-block">
+<pre style="font-size:9pt;">
+<strong><span>mBiometricManager </span></strong>= BiometricManager.BiometricBuilder(<em><span>activity </span></em><strong><span>as </span></strong>Context)
+    .setTitle(LanguageHelper.getLabel(Constants.<strong><span>KEY_LOGIN_SIGN_IN</span></strong>)!!)
+    .setSubtitle(<strong><span>&quot;&quot;</span></strong>)
+    .setDescription(LanguageHelper.getLabel(Constants.<strong><span>KEY_LOGIN_BIOMETRIC_DESCRIPTION</span></strong>)!!)
+    .setNegativeButtonText(LanguageHelper.getLabel(Constants.<strong><span>KEY_GLOBAL_CANCEL</span></strong>)!!)
+    .build()
+<strong><span>mBiometricManager</span></strong>!!.authenticate(<strong><span>this</span></strong>)</pre>
+</div>
+</p>
+</body></html>
