@@ -1,0 +1,333 @@
+{
+id : 1,
+base_url :"https://threespartans.github.io/web/",
+values : [
+{
+	id : 1,
+	title : "Apollo Platform",
+	sub_titles : [
+	{
+		id : 1,
+		name : "Introduction",
+		web_link : "ApolloPlatform8.html"
+	},
+	{
+		id : 2,
+		name : "Internal Distribution",
+		web_link : "ApolloPlatform8.html"
+	},
+	{
+		id : 3,
+		name : "Repository",
+		web_link : "ApolloPlatform8.html"
+	},
+	{
+		id : 4,
+		name : "Development Guidelines",
+		web_link : "ApolloPlatform8.html"
+	},
+	{
+		id : 5,
+		name : "Development Methodology",
+		web_link : ""
+	},
+	{
+		id : 6,
+		name : "Guidelines on Structure",
+		web_link : "ApolloPlatform8.html"
+	},
+	{
+		id : 7,
+		name : "Catalogue",
+		web_link : "ApolloPlatform8.html"
+	}
+	],
+},
+{
+	id : 2,
+	title : "Code Generator",
+	sub_titles : [
+	{
+		id : 1,
+		name : "Introduction",
+		web_link : "CodeGenerator-%2068.html"
+	},
+	{
+		id : 2,
+		name : "Status",
+		web_link : "CodeGenerator-%2068.html"
+	},
+	{
+		id : 3,
+		name : "Team",
+		web_link : "CodeGenerator-%2068.html"
+	}
+	],
+},
+{
+	id : 3,
+	title : "Android Components",
+	sub_titles : [
+	{
+		id : 1,
+		name : "CMTextInput",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 2,
+		name : "CMKeypad",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 3,
+		name : "CMButton",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 4,
+		name : "CMGradientDrawableBuilder",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 5,
+		name : "CMSearchView",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 6,
+		name : "CMStepView",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 7,
+		name : "CMTimeInput",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 8,
+		name : "CMDateInput",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 9,
+		name : "CMDropDownView",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 10,
+		name : "CMCenteredIconButton",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 11,
+		name : "CMStepProgressBar",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 12,
+		name : "CMCalendar",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 13,
+		name : "CMCardConnect",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 14,
+		name : "CMLicencePlateReaderALPR",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 15,
+		name : "CMFirebaseEventLogger",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 16,
+		name : "CMBarCodeScanner",
+		web_link : ""
+	},
+	{
+		id : 17,
+		name : "CMImageHelper",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 18,
+		name : "CMNetworkHelper",
+		web_link : "AndoridComponents-2.html"
+	},
+	{
+		id : 19,
+		name : "BiometricAuthentication",
+		web_link : "AndoridComponents-2.html"
+	}
+	],
+},
+{
+	id : 4,
+	title : "CI-CD",
+	sub_titles : [
+	{
+		id : 1,
+		name : "Introduction",
+		web_link : "CI-CD-65.html"
+	},
+	{
+		id : 2,
+		name : "Team",
+		web_link : "CI-CD-65.html"
+	}
+	],
+},
+{
+	id : 5,
+	title : "AndroidComponentsUpdated",
+	sub_titles : [
+	{
+		id : 1,
+		name : "CMTextInput",
+		web_link : "AndroidComponentsUpdated-%2081.html"
+	},
+	{
+		id : 2,
+		name : "Untitled section",
+		web_link : "AndroidComponentsUpdated-%2081.html"
+	}
+	],
+},
+{
+	id : 6,
+	title : "iOS Components",
+	sub_titles : [
+	{
+		id : 1,
+		name : "CMButton",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 2,
+		name : "CMKeyPad",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 3,
+		name : "CMView",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 4,
+		name : "CMPickerView",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 5,
+		name : "CMDevice",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 6,
+		name : "CMToolBar",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 7,
+		name : "CMLabel",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 8,
+		name : "CMView",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 9,
+		name : "CMStackView",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 10,
+		name : "CMTextField",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 11,
+		name : "CMSearchView",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 12,
+		name : "CMCalender",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 13,
+		name : "ApolloTextInput",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 14,
+		name : "SSN/DOB/Zip Code",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 15,
+		name : "MultiLineTextInput",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 16,
+		name : "CMLicencePlateReaderALPR",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 17,
+		name : "CMCardConnect",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 18,
+		name : "CMFirebaseEventLogger",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 19,
+		name : "CMBarcodeScanner",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 20,
+		name : "CMImageHelper",
+		web_link : "iOSUIComponents-26.html"
+	},
+	{
+		id : 21,
+		name : "CMNetworkHelper",
+		web_link : "iOSUIComponents-26.html"
+	},
+	],
+}
+{
+	id : 7,
+	title : "CMAA",
+	sub_titles : [
+	{
+		id : 1,
+		name : "Team",
+		web_link : "CMAA-61.html"
+	},
+	{
+		id : 2,
+		name : "Introduction",
+		web_link : "CMAA-61.html"
+	},
+	{
+		id : 3,
+		name : "Introduction",
+		web_link : "CMAA-61.html"
+	}
+	],
+}
+],
+}
