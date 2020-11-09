@@ -29,7 +29,7 @@ values : [
 	{
 		id : 5,
 		name : "Development Methodology",
-		web_link : ""
+		web_link : "ApolloPlatform8.html"
 	},
 	{
 		id : 6,
@@ -307,7 +307,7 @@ values : [
 		web_link : "iOSUIComponents-26.html"
 	},
 	],
-}
+},
 {
 	id : 7,
 	title : "CMAA",
